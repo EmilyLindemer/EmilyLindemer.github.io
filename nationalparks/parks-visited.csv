@@ -1,18 +1,59 @@
-years,place,lat,lon
-5,Acadia,44.3386,-68.2733
-5,Arches,38.7331,-109.5925
-5,Badlands,43.8554,-102.3397
-5,Black Canyon of the Gunnison,38.5754,-107.7416
-5,Bryce Canyon,37.5930,-112.1871
-5,Canyonlands,38.3269,-109.8783
-5,Crater Lake,42.8684,-122.1685
-5,Death Valley,36.5054,-117.0794
-5,Grand Canyon,36.1070,-112.1130
-5,Grand Teton,43.7904,-110.6818
-5,Great Sand Dunes,37.7916,-105.5943
-5,Haleakala,20.7204,-156.1552
-5,Mesa Verde,37.2309,-108.4618
-5,Redwood,41.2132,-124.0046
-5,Rocky Mountain,40.3428,-105.6836
-5,Yellowstone,44.4280,-110.5885
-5,Zion,37.2982,-113.0263
+years,place,lat,lon,color
+5,Acadia,44.3386,-68.2733,#d95b43
+5,Arches,38.7331,-109.5925,#d95b43
+5,Badlands,43.8554,-102.3397,#d95b43
+5,Black Canyon of the Gunnison,38.5754,-107.7416,#d95b43
+5,Bryce Canyon,37.5930,-112.1871,#d95b43
+5,Canyonlands,38.3269,-109.8783,#d95b43
+5,Crater Lake,42.8684,-122.1685,#d95b43
+5,Death Valley,36.5054,-117.0794,#d95b43
+5,Grand Canyon,36.1070,-112.1130,#d95b43
+5,Grand Teton,43.7904,-110.6818,#d95b43
+5,Great Sand Dunes,37.7916,-105.5943,#d95b43
+5,Haleakala,20.7204,-156.1552,#d95b43
+5,Mesa Verde,37.2309,-108.4618,#d95b43
+5,Redwood,41.2132,-124.0046,#d95b43
+5,Rocky Mountain,40.3428,-105.6836,#d95b43
+5,Yellowstone,44.4280,-110.5885,#d95b43
+5,Zion,37.2982,-113.0263,#d95b43,
+1,Big Bend,29.1275,-103.2425,#542437
+1,Biscayne,25.6937,-80.1628,#542437
+1,Capitol Reef,38.3670,-111.2615,#542437
+1,Carlsbad Caverns,32.1479,-104.5567,#542437
+1,Channel Islands,34.0097,-119.8023,#542437
+1,Congaree,33.7917,-80.7693,#542437
+1,Cuyahoga Valley,41.2808,-81.5678,#542437
+1,Denali,63.1148,-151.1926,#542437
+1,Dry Tortugas,24.6333,-82.9200,#542437
+1,Everglades,25.2866,-80.8987,#542437
+1,Gates of the Arctic,67.9146,-153.4638,#542437
+1,Glacier,48.7596,-113.7870,#542437
+1,Glacier Bay,58.6658,-136.9002,#542437
+1,Great Basin,38.9833,-114.3000,#542437
+1,Great Smoky Mountains,35.6118,-83.4895,#542437
+1,Guadalupe Mountains,31.9452,-104.8725,#542437
+1,Hawaii Volcanoes,19.4194,-155.2885,#542437
+1,Hot Springs,34.5217,-93.0424,#542437
+1,Isle Royale,47.9959,-88.9093,#542437
+1,Joshua Tree,33.8734,-115.9010,#542437
+1,Katmai,58.5975,-154.6937,#542437
+1,Kenai Fjords,60.0438,-149.8164,#542437
+1,Kings Canyon,36.8879,-118.5551,#542437
+1,Kobuk Valley,67.3356,-159.1243,#542437
+1,Lake Clark,60.4127,-154.3235,#542437
+1,Lassen Volcanic,40.4977,-121.4207,#542437
+1,Mammoth Cave,37.1870,-86.1005,#542437
+1,Mount Rainier,46.8800,-121.7269,#542437
+1,North Cascades,48.7718,-121.2985,#542437
+1,Olympic,47.8021,-123.6044,#542437
+1,Petrified Forest,34.9100,-109.8068,#542437
+1,Pinnacles,36.4906,-121.1825,#542437
+1,Saguaro,32.2967,-111.1666,#542437
+1,Sequoia,36.4864,-118.5658,#542437
+1,Shenandoah,38.2928,-78.6796,#542437
+1,Theodore Roosevelt,46.9790,-103.5387,#542437
+1,Virgin Islands,18.3424,-64.7486,#542437
+1,Voyageurs,48.4841,-92.8271,#542437
+1,Wind Cave,43.6046,-103.4213,#542437
+1,Wrangell-St. Elias,61.7104,-142.9857,#542437
+1,Yosemite,37.8651,-119.5383,#542437
