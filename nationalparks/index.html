@@ -155,7 +155,10 @@ svg.selectAll("circle")
 	.attr("r", function(d) {
 		return Math.sqrt(d.years) * 4;
 	})
-		.style("fill", d.color)
+	.attr("fill",function(d){
+		return project(d.color)[0];
+	})
+		//.style("fill", "rgb(217,91,67)")
 		.style("opacity", 0.85)
 
 	// Modification of custom tooltip code provided by Malcolm Maclean, "D3 Tips and Tricks"
