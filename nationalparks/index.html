@@ -184,21 +184,21 @@ svg.selectAll("circle")
 	.data(data2)
 	.enter()
 	.append("circle")
-	.attr("cx", function(d) {
-		return projection([d.lon, d.lat])[0];
+	.attr("cx", function(d2) {
+		return projection([d2.lon, d2.lat])[0];
 	})
-	.attr("cy", function(d) {
-		return projection([d.lon, d.lat])[1];
+	.attr("cy", function(d2) {
+		return projection([d2.lon, d2.lat])[1];
 	})
-	.attr("r", function(d) {
-		return Math.sqrt(d.years) * 4;
+	.attr("r", function(d2) {
+		return Math.sqrt(d2.years) * 4;
 	})
 		.style("fill", "rgb(84,36,55)")
 		.style("opacity", 0.85)
 
 	// Modification of custom tooltip code provided by Malcolm Maclean, "D3 Tips and Tricks"
 	// http://www.d3noob.org/2013/01/adding-tooltips-to-d3js-graph.html
-	.on("mouseover", function(d) {
+	.on("mouseover", function(d2) {
     	div.transition()
       	   .duration(200)
            .style("opacity", .9);
@@ -208,7 +208,7 @@ svg.selectAll("circle")
 	})
 
     // fade out tooltip on mouse out
-    .on("mouseout", function(d) {
+    .on("mouseout", function(d2) {
         div.transition()
            .duration(500)
            .style("opacity", 0);
