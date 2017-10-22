@@ -159,9 +159,8 @@ svg.selectAll("circle")
 	.style("fill", function(d) {
 
 		// Get data value
-		var value = d.visited;
 
-		if (value) {
+		if (d.visited == 1) {
 		//If value exists…
 			return "rgb(217,91,67)";
 		} else {
