@@ -140,7 +140,7 @@ svg.selectAll("path")
 
 
 // Map the parks I have visited!
-d3.csv("test.csv", function(data) {
+d3.csv("parks.csv", function(data) {
 
 svg.selectAll("circle")
 	.data(data)
@@ -153,9 +153,22 @@ svg.selectAll("circle")
 		return projection([d.lon, d.lat])[1];
 	})
 	.attr("r", function(d) {
-		return Math.sqrt(1) * 4;
+		return Math.sqrt((d.visited * 4) + 1) * 4;
 	})
-		.style("fill", "rgb(217,91,67)")
+		//.style("fill", "rgb(217,91,67)")
+		.style("fill", function(d) {
+
+		// Get data value
+		var value = d.properties.visited;
+
+		if (value) {
+		//If value exists…
+			return "rgb(217,91,67)";
+		} else {
+		//If value is undefined…
+		return "rgb(84,36,55)";
+		}
+	})
 		.style("opacity", 0.85)
 
 	// Modification of custom tooltip code provided by Malcolm Maclean, "D3 Tips and Tricks"
