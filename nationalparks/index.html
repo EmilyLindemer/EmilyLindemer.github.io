@@ -211,9 +211,8 @@
 				  .attr('transform', "translate(" + (margin.left + width) + ",0)")
 
 				// Modified Legend Code from Mike Bostock: http://bl.ocks.org/mbostock/3888852
-				//var legend = d3.select("body").append("svg")
-				var legend = legendHolder.selectAll(".legend")
-					    			.attr("class", "legend")
+				var legend = d3.select("body").append("svg")
+				      			.attr("class", "legend")
 				     			.attr("width", 140)
 				    			.attr("height", 200)
 				   				.selectAll("g")
@@ -223,7 +222,7 @@
 				     			.attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
 
 				  	legend.append("rect")
-								.attr("x", 0)
+								.attr("x",0)
 				   		  .attr("width", 18)
 				   		  .attr("height", 18)
 				   		  .style("fill", color);
