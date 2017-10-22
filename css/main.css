@@ -6,7 +6,8 @@ nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
     list-style: none;
-    font-weight: bold;
+    font-weight: bold
+    color: #60ad5e;
 }
 nav ul li, footer ul li {
     display: inline;
@@ -15,7 +16,7 @@ nav ul li, footer ul li {
 }
 a {
     text-decoration: none;
-    color: #999;
+    color: #60ad5e;
 }
 a:hover {
     text-decoration: underline;
