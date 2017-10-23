@@ -202,6 +202,11 @@
 				           .duration(500)
 				           .style("opacity", 0);
 				    });
+
+						.on("click", function(d) {
+							document.getElementById('parkdescription').innerHTML = "test";
+
+						})
 				});
 
 				var margin = {top: 20, right: 100, bottom: 30, left: 40};
@@ -237,7 +242,7 @@
 				});
 				</script>
 			</div>
-			<div class="container">
+			<div class="container" id="parkdescription">
 				<h1>The end</h1>
 			<div>
 			<footer>
