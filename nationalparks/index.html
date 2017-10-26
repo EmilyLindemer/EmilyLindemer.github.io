@@ -103,11 +103,13 @@
 				//Load visited parks information
 
 
-				var parksinfo = d3.json("parks-info2.json",function(json){
+				/*var parksinfo = d3.json("parks-info2.json",function(json){
 				//	console.log(json);
 					return json;
-				});
+				});*/
 
+				var parksinfo = JSON.parse("parks-info.json");
+				
 				// Load in my states data!
 				d3.csv("stateslived.csv", function(data) {
 				color.domain([0,1,2,3]); // setting the range of the input data
