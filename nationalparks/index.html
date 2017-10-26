@@ -108,8 +108,11 @@
 					return json;
 				});*/
 
-				var parksinfo = JSON.parse("parks-info.json");
-				
+				var request = new XMLHttpRequest();
+				request.open('GET', 'parks-info.json', false);
+				request.send();
+				var parksinfo = JSON.parse(request.responseText);
+
 				// Load in my states data!
 				d3.csv("stateslived.csv", function(data) {
 				color.domain([0,1,2,3]); // setting the range of the input data
