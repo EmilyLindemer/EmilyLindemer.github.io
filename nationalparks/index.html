@@ -102,21 +102,10 @@
 
 				//Load visited parks information
 
-				var parksinfojson = (function () {
-    				var parksinfojson = null;
-    						$.ajax({
-						        'async': false,
-						        'global': false,
-						        'url': "parks-info2.json",
-						        'dataType': "json",
-						        'success': function (data) {
-						            json = data;
-					        }
-					    });
-					    return json;
-					})();
 
-				var parksinfo = JSON.parse(parksinfojson);
+				var parksinfo = d3.json("parks-info2.json",function(json){
+					return json;
+				});
 
 				// Load in my states data!
 				d3.csv("stateslived.csv", function(data) {
