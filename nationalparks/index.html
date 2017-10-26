@@ -101,7 +101,8 @@
 				    		.style("opacity", 0);
 
 				//Load visited parks information
-				var parksinfo = JSON.parse("parks-info2.json");
+				var parksinfofile = "'parks-info2.json')";
+				var parksinfo = JSON.parse(parksinfofile);
 
 				// Load in my states data!
 				d3.csv("stateslived.csv", function(data) {
