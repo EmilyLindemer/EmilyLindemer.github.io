@@ -253,8 +253,8 @@
 						.on("click", function(d) {
 
 							thispark = getObject(parksinfo,'',d.place);
-							console.log(thispark[0].park);
-							document.getElementById('parkdescription').innerHTML = "<h1>" + thispark.park + "</h1><p><h6>Established</h6>" + thispark.established + "</p>";
+							//console.log(thispark[0].park);
+							document.getElementById('parkdescription').innerHTML = "<h1>" + thispark[0].park + "</h1><p><h6>Established</h6>" + thispark[0].established + "</p>";
 
 							//document.getElementById('parkdescription').innerHTML = "<h1>" + d.place + "</h1>";
 
