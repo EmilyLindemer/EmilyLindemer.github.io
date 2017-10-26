@@ -7,6 +7,7 @@
 			<meta charset="utf-8">
 			<script src="https://d3js.org/d3.v4.min.js"></script>
 			<style type="text/css">
+			<script type="text/javascript" src="http://localhost/parks-info.json"></script>
 
 			/* On mouse hover, lighten state color
 			path:hover {
@@ -113,7 +114,7 @@
 				request.send();
 				var parksinfo = JSON.parse(request.responseText);*/
 
-				var parksinfo =
+		/*		var parksinfo =
 				  {
 				      "park":"Acadia",
 				      "established":"1916",
@@ -126,7 +127,7 @@
 				      "ontheway":"so much cool stuff in bar harbor",
 				      "secrets":"cottage st pub"
 				  };
-
+*/
 				// Load in my states data!
 				d3.csv("stateslived.csv", function(data) {
 				color.domain([0,1,2,3]); // setting the range of the input data
