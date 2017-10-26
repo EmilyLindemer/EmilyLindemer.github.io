@@ -1,3 +1,7 @@
+{
+  "type" : "FeatureCollection",
+
+  "features":
 [{
   "park":"Acadia",
   "established":"1916",
@@ -10,3 +14,4 @@
   "ontheway":"so much cool stuff in bar harbor",
   "secrets":"cottage st pub"
 }]
+} 
