@@ -257,7 +257,7 @@
 							//var thispark = jQuery.parseJSON("https://emilylindemer.github.io/nationalparks/parks-info.json");
 
 								$.getJSON('parks-info.json', function(data) {
-									document.getElementById('parkdescription').innerHTML = "<h1>" + data.park + "</h1><p><h6>Established</h6>" + data.established + "</p>"
+									document.getElementById('parkdescription').innerHTML = "<h1>" + data.park + "</h1><h4>Established" + data.established + "</h4>"
 
 									})
 
