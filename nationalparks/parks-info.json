@@ -1,4 +1,4 @@
-[
+
   {
         "@schema": "https://emilylindemer.github.io/nationalparks/parks-schema.json",
         "name":"Acadia",
@@ -11,17 +11,3 @@
         "gettingthere":"The drive from Boston to Mount Desert Island (MDI) is a little over five hours, and if you go in early autumn like I do, it's beautiful. You won't pass much excitement on the way, but once you land on MDI you still have at least half an hour until the park entrance and I'd highly recommend taking in your surroundings and enjoying the journey.",
         "secrets":"<p>The first thing I'll say about Acadia's secrets really isn't a secret. Mt. Cadillac, located within the park, is the highest point along the eastern coast of the U.S., which means that its peak is the first place in the U.S. to see the sun rise. Every year I make an effort to wake up early one morning, while it's still dark, and drive up to the summit to watch the sunrise. It's usually freezing, and sometimes there is so much fog that you don't see a sunrise at all, but there is magic when it happens. Even if you don't see it because there's fog or clouds, there's something magical about the congregation of people wrapped in blankets with thermoses of coffee to all watch something as simple as a sunrise. Do it, you'll sleep when you're dead.</p><p>Every time I come to Acadia I find another hidden gem about the park. My secrets about Acadia, like most parks, involve what's <i>around</i> the park rather than what's in it. The town of Bar Harbor is right nextdoor to Acadia, and starting in late spring and ending in early autumn, LL Bean sponsors a free shuttle that takes you around the park and out to Bar Harbor. The shuttle trips to my evenings in Bar Harbor are one of the things I look forward to the most, particularly because of a little bar called Cottage Street Pub. This place so so awesome and secret, they don't even have a website or else I'd link you there right now. Every year on my annual trip to Acadia, I spend an afternoon at Cottage Street Pub. They hands down have the best cocktail menu in the northeast. Maybe North America, maybe the world. Seriously. And it's the most interesting little slice of life, I've never gone there and not met an interesting person from an entirely different walk of life than my own -- I think that aside from the cocktails, that's why I keep going back. The bartenders are amazing, and the free popcorn comes continuously. You can't go wrong.</p>"
   }
-  {
-        "@schema": "https://emilylindemer.github.io/nationalparks/parks-schema.json",
-        "name":"Yellowstone",
-        "established":"1872",
-        "visited":"2015",
-        "lodging":"",
-        "image":"",
-        "hiking":"",
-        "impressions":"",
-        "gettingthere":"",
-        "secrets":""
-  }
-
-]
