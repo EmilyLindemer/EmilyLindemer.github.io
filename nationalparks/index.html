@@ -242,6 +242,8 @@
 				           div.text(d.place)
 				           .style("left", (d3.event.pageX) + "px")
 				           .style("top", (d3.event.pageY - 28) + "px");
+
+							.style("fill",rbg(139,0,0))
 					})
 
 				    // fade out tooltip on mouse out
@@ -249,6 +251,15 @@
 				        div.transition()
 				           .duration(500)
 				           .style("opacity", 0);
+
+									if (d.visited == 1) {
+	 								//If value exists…
+	 									return "rgb(51,127,105)";
+	 								} else {
+	 								//If value is undefined…
+	 								return "rgb(84,36,55)";
+	 								}
+	 							})
 				    })
 
 						.on("click", function(d) {
