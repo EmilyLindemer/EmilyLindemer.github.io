@@ -237,13 +237,13 @@
 								$.getJSON('parks-info.json', function(data) {
 									document.getElementById('parkdescription').innerHTML =
 															"<h1>" + data[1].name +
-															" National Park</h1><h4>Established " + data[1].established +"</h4>" +
-															"<center><img src=\"" + data[1].image +  "\" width = \"50%\"></center>" +
-															"<h4>Impressions</h4><p>" + data[1].impressions + "</p>" +
-															"<h4>Getting There</h4><p>" + data[1].gettingthere + "</p>" +
-															"<h4>Lodging</h4><p>" + data[1].lodging + "</p>" +
-															"<h4>Hiking</h4><p>" + data[1].hiking + "</p>" +
-															"<h4>Secrets</h4><p>" + data[1].secrets + "</p>";
+															" National Park</h1><h4>Established " + data.established +"</h4>" +
+															"<center><img src=\"" + data.image +  "\" width = \"50%\"></center>" +
+															"<h4>Impressions</h4><p>" + data.impressions + "</p>" +
+															"<h4>Getting There</h4><p>" + data.gettingthere + "</p>" +
+															"<h4>Lodging</h4><p>" + data.lodging + "</p>" +
+															"<h4>Hiking</h4><p>" + data.hiking + "</p>" +
+															"<h4>Secrets</h4><p>" + data.secrets + "</p>";
 
 									})
 
