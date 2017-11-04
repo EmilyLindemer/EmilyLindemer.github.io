@@ -231,30 +231,33 @@
 				    })
 
 						.on("click", function(d) {
-
-							console.log(d.place)
-
 										$.getJSON('parks-info.json', function(json) {
 
-											console.log(json.length)
 											for (var j = 0; j < json.length; j++)  {
-
-												var jsonPark = json[j].name;
+													var jsonPark = json[j].name;
 
 													if (d.place == jsonPark) {
-
 														// Put the park info into the <div> below
-														document.getElementById('parkdescription').innerHTML =
-														"<h1>" + jsonPark +
-														" National Park</h1><h4>Established " + json[j].established +"</h4>" +
-														"<center><img src=\"" + json[j].image +  "\" width = \"50%\"></center>" +
-														"<h4>Impressions</h4><p>" + json[j].impressions + "</p>" +
-														"<h4>Getting There</h4><p>" + json[j].gettingthere + "</p>" +
-														"<h4>Lodging</h4><p>" + json[j].lodging + "</p>" +
-														"<h4>Hiking</h4><p>" + json[j].hiking + "</p>" +
-														"<h4>Secrets</h4><p>" + json[j].secrets + "</p>";
-														// Stop looking through the JSON
-														break;
+														if (d.visited == 1){
+
+															document.getElementById('parkdescription').innerHTML =
+															"<h1>" + jsonPark +
+															" National Park</h1><h4>Established " + json[j].established +"</h4>" +
+															"<center><img src=\"" + json[j].image +  "\" width = \"50%\"></center>" +
+															"<h4>Impressions</h4><p>" + json[j].impressions + "</p>" +
+															"<h4>Getting There</h4><p>" + json[j].gettingthere + "</p>" +
+															"<h4>Lodging</h4><p>" + json[j].lodging + "</p>" +
+															"<h4>Hiking</h4><p>" + json[j].hiking + "</p>" +
+															"<h4>Secrets</h4><p>" + json[j].secrets + "</p>";
+															// Stop looking through the JSON
+															break;}
+															else{
+																document.getElementById('parkdescription').innerHTML =
+																"<h1>" + jsonPark +
+																" National Park</h1><h4>Established " + json[j].established +"</h4>" +
+																"<p>I haven't been here yet, but it sure is on my list!</p>";
+																break;
+															}
 													}
 
 
