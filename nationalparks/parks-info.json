@@ -1,12 +1,10 @@
 {
+  "@schema": "https://emilylindemer.github.io/nationalparks/parks-schema.json",
   "type": "ParkCollection",
-
-
   "parks":[
 
-      {"type": "Park",
+      {"type": "park",
         "properties": {
-          "@schema": "https://emilylindemer.github.io/nationalparks/parks-schema.json",
           "name":"Acadia",
           "established":"1916",
           "visited":"2015,2016,2017",
@@ -21,7 +19,6 @@
 
       {"type": "Park",
         "properties": {
-          "@schema": "https://emilylindemer.github.io/nationalparks/parks-schema.json",
           "name":"Yellowstone",
           "established":"1872",
           "visited":"",

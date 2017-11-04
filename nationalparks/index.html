@@ -234,22 +234,22 @@
 
 								$.getJSON('parks-info.json', function(json) {
 
-									for (var j = 0; j < json.features.length; j++)  {
+									for (var j = 0; j < json.parks.length; j++)  {
 
-										var jsonPark = json.features[j].properties.name;
+										var jsonPark = json.parks[j].properties.name;
 
 											if (d.place == jsonPark) {
 
 												// Put the park info into the <div> below
 												document.getElementById('parkdescription').innerHTML =
 												"<h1>" + jsonPark +
-												" National Park</h1><h4>Established " + json.features[j].properties.established +"</h4>" +
-												"<center><img src=\"" + json.features[j].properties.image +  "\" width = \"50%\"></center>" +
-												"<h4>Impressions</h4><p>" + json.features[j].properties.impressions + "</p>" +
-												"<h4>Getting There</h4><p>" + json.features[j].properties.gettingthere + "</p>" +
-												"<h4>Lodging</h4><p>" + json.features[j].properties.lodging + "</p>" +
-												"<h4>Hiking</h4><p>" + json.features[j].properties.hiking + "</p>" +
-												"<h4>Secrets</h4><p>" + json.features[j].properties.secrets + "</p>";
+												" National Park</h1><h4>Established " + json.parks[j].properties.established +"</h4>" +
+												"<center><img src=\"" + json.parks[j].properties.image +  "\" width = \"50%\"></center>" +
+												"<h4>Impressions</h4><p>" + json.parks[j].properties.impressions + "</p>" +
+												"<h4>Getting There</h4><p>" + json.parks[j].properties.gettingthere + "</p>" +
+												"<h4>Lodging</h4><p>" + json.parks[j].properties.lodging + "</p>" +
+												"<h4>Hiking</h4><p>" + json.parks[j].properties.hiking + "</p>" +
+												"<h4>Secrets</h4><p>" + json.parks[j].properties.secrets + "</p>";
 												// Stop looking through the JSON
 												break;
 											}
