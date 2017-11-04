@@ -232,18 +232,28 @@
 
 						.on("click", function(d) {
 
-							  //thispark = getObject(parksinfo,'',d.place);
+								$.getJSON('parks-info.json', function(json) {
 
-								$.getJSON('parks-info.json', function(data) {
-									document.getElementById('parkdescription').innerHTML =
-															"<h1>" + data[1].name +
-															" National Park</h1><h4>Established " + data.established +"</h4>" +
-															"<center><img src=\"" + data.image +  "\" width = \"50%\"></center>" +
-															"<h4>Impressions</h4><p>" + data.impressions + "</p>" +
-															"<h4>Getting There</h4><p>" + data.gettingthere + "</p>" +
-															"<h4>Lodging</h4><p>" + data.lodging + "</p>" +
-															"<h4>Hiking</h4><p>" + data.hiking + "</p>" +
-															"<h4>Secrets</h4><p>" + data.secrets + "</p>";
+									for (var j = 0; j < json.features.length; j++)  {
+
+										var jsonPark = json.features[j].properties.name;
+
+											if (d.place == jsonPark) {
+
+												// Put the park info into the <div> below
+												document.getElementById('parkdescription').innerHTML =
+												"<h1>" + jsonPark +
+												" National Park</h1><h4>Established " + json.features[j].properties.established +"</h4>" +
+												"<center><img src=\"" + json.features[j].properties.image +  "\" width = \"50%\"></center>" +
+												"<h4>Impressions</h4><p>" + json.features[j].properties.impressions + "</p>" +
+												"<h4>Getting There</h4><p>" + json.features[j].properties.gettingthere + "</p>" +
+												"<h4>Lodging</h4><p>" + json.features[j].properties.lodging + "</p>" +
+												"<h4>Hiking</h4><p>" + json.features[j].properties.hiking + "</p>" +
+												"<h4>Secrets</h4><p>" + json.features[j].properties.secrets + "</p>";
+												// Stop looking through the JSON
+												break;
+											}
+
 
 									})
 
