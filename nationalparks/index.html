@@ -232,10 +232,6 @@
 
 						.on("click", function(d) {
 
-							  //thispark = getObject(parksinfo,'',d.place);
-
-								.on("click", function(d) {
-
 										$.getJSON('parks-info.json', function(json) {
 
 											for (var j = 0; j < json.parks.length; j++)  {
@@ -257,6 +253,8 @@
 														// Stop looking through the JSON
 														break;
 													}
+
+
 											}
 								})
 
