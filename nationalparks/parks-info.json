@@ -1,5 +1,6 @@
 [
-
+    "@schema": "https://emilylindemer.github.io/nationalparks/parks-schema.json",
+    
       {"type": "park",
         "properties": {
           "name":"Acadia",
