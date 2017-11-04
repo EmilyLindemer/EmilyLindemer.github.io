@@ -232,10 +232,11 @@
 
 						.on("click", function(d) {
 
+							console.log(d.place)
+
 										$.getJSON('parks-info.json', function(json) {
 
 											console.log(json)
-											console.log(d.place)
 											console.log(json.parks.length)
 											for (var j = 0; j < json.parks.length; j++)  {
 
