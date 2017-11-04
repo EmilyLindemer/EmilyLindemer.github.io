@@ -246,13 +246,13 @@
 														// Put the park info into the <div> below
 														document.getElementById('parkdescription').innerHTML =
 														"<h1>" + jsonPark +
-														" National Park</h1><h4>Established " + json.parks[j].properties.established +"</h4>" +
-														"<center><img src=\"" + json.parks[j].properties.image +  "\" width = \"50%\"></center>" +
-														"<h4>Impressions</h4><p>" + json.parks[j].properties.impressions + "</p>" +
-														"<h4>Getting There</h4><p>" + json.parks[j].properties.gettingthere + "</p>" +
-														"<h4>Lodging</h4><p>" + json.parks[j].properties.lodging + "</p>" +
-														"<h4>Hiking</h4><p>" + json.parks[j].properties.hiking + "</p>" +
-														"<h4>Secrets</h4><p>" + json.parks[j].properties.secrets + "</p>";
+														" National Park</h1><h4>Established " + json[j].established +"</h4>" +
+														"<center><img src=\"" + json[j].image +  "\" width = \"50%\"></center>" +
+														"<h4>Impressions</h4><p>" + json[j].impressions + "</p>" +
+														"<h4>Getting There</h4><p>" + json[j].gettingthere + "</p>" +
+														"<h4>Lodging</h4><p>" + json[j].lodging + "</p>" +
+														"<h4>Hiking</h4><p>" + json[j].hiking + "</p>" +
+														"<h4>Secrets</h4><p>" + json[j].secrets + "</p>";
 														// Stop looking through the JSON
 														break;
 													}
