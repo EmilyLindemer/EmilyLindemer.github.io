@@ -3,21 +3,22 @@
 
   "definitions": {
     "park": {
-      "type": "object",
-      "properties": {
-        "name": { "type": "string" },
-        "established": { "type": "number" },
-        "visited": { "type": "number" },
-        "lodging": { "type": "string" },
-        "image": { "type": "string" },
-        "hiking": { "type": "string" },
-        "impressions": { "type": "string" },
-        "gettingthere": { "type": "string" },
-        "ontheway": { "type": "string" },
-        "secrets": { "type": "string" },
+        "type":"object",
+        "required": ["name","established"],
+        "properties": {
+          "name": { "type": "string" },
+          "established": { "type": "number" },
+          "visited": { "type": "number" },
+          "lodging": { "type": "string" },
+          "image": { "type": "string" },
+          "hiking": { "type": "string" },
+          "impressions": { "type": "string" },
+          "gettingthere": { "type": "string" },
+          "ontheway": { "type": "string" },
+          "secrets": { "type": "string" },
       },
-      "required": ["name","established"]
-      }}
-
-
+    }
   }
+
+
+}

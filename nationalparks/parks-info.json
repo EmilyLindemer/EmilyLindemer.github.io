@@ -1,7 +1,4 @@
-{
-  "@schema": "https://emilylindemer.github.io/nationalparks/parks-schema.json",
-  "type": "ParkCollection",
-  "parks":[
+[
 
       {"type": "park",
         "properties": {
@@ -17,7 +14,7 @@
         }
       }
 
-      {"type": "Park",
+      {"type": "park",
         "properties": {
           "name":"Yellowstone",
           "established":"1872",
@@ -29,6 +26,4 @@
           "gettingthere":""
         }
       }
-
-      ]
-    }
+]

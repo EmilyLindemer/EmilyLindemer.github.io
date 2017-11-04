@@ -236,9 +236,8 @@
 
 										$.getJSON('parks-info.json', function(json) {
 
-											console.log(json)
-											console.log(json.parks.length)
-											for (var j = 0; j < json.parks.length; j++)  {
+											console.log(json.length)
+											for (var j = 0; j < json.length; j++)  {
 
 												var jsonPark = json.parks[j].properties.name;
 
