@@ -159,7 +159,7 @@
 
 				// Bind the data to the SVG and create one path per GeoJSON feature
 				svg.selectAll("path")
-					.data(json.features)
+					.data(json.objects)
 					.enter()
 					.append("path")
 					.attr("d", path)
