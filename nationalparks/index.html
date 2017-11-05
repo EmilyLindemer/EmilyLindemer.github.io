@@ -7,7 +7,7 @@
 			<meta charset="utf-8">
 			<script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 			<script src="https://d3js.org/d3.v4.min.js"></script>
-			<script src="https://unpkg.com/topojson@3"></script>
+			<script src="https://d3js.org/topojson.v2.min.js"></script>
 			<style type="text/css">
 
 			/* On mouse hover, lighten state color
@@ -68,96 +68,50 @@
 
 				Mike Bostock, Pie Chart Legend
 				http://bl.ocks.org/mbostock/3888852  */
-				var d3_composite = require("d3-composite-projections");
-				var d3_geo = require("d3-geo");
-				var d3_request = require("d3-request");
-				var d3_selection = require("d3-selection");
-				var d3_transition = require("d3-transition");
-				var topojson = require("topojson");
+
 
 				//Width and height of map
 				var width = 960;
 				var height = 500;
 
 				// D3 Projection
-				//var projection = d3.geoAlbersUsa()
-					//			   .translate([width/2, height/2])    // translate to center of screen
-						//		   .scale([1000]);          // scale things down so see entire US
-
-				 // D3 Projection
- 				var projection = d3_composite.geoAlbersUsa();
-
+				var projection = d3.geoAlbersUsa()
+								   .translate([width/2, height/2])    // translate to center of screen
+								   .scale([1000]);          // scale things down so see entire US
 
 				// Define path generator
-				//var path = d3.geoPath()               // path generator that will convert GeoJSON to SVG paths
-					//	  	 .projection(projection);  // tell path generator to use albersUsa projection
-				 var path = d3_geo.geoPath()               // path generator that will convert GeoJSON to SVG paths
-				 				 .projection(projection);  // tell path generator to use albersUsa projection
+				var path = d3.geoPath()               // path generator that will convert GeoJSON to SVG paths
+						  	 .projection(projection);  // tell path generator to use albersUsa projection
 
 
 				// Define linear scale for output
-				//var color = d3.scaleLinear()
-					//		  .range(["rgb(213,222,217)","rgb(143,204,183)","rgb(84,36,55)","rgb(51,127,105)"]);
+				var color = d3.scaleLinear()
+							  .range(["rgb(213,222,217)","rgb(143,204,183)","rgb(84,36,55)","rgb(51,127,105)"]);
 
 				var legendText = ["Parks Visited", "Parks Unvisited", "States Visited", "It's on my list"];
 
 				//Create SVG element and append map to the SVG
-				var svg = d3_selection.select("body")
+				var svg = d3.select("body")
 							.append("svg")
 							.attr("width", width)
 							.attr("height", height);
 
 				// Append Div for tooltip to SVG
-				//var div = d3.select("body")
-					//	    .append("div")
-				    //		.attr("class", "tooltip")
-				    	//	.style("opacity", 0);
+				var div = d3.select("body")
+						    .append("div")
+				    		.attr("class", "tooltip")
+				    		.style("opacity", 0);
 
-			 //Just added this section from https://bl.ocks.org/rveciana/ee2119324e835e1bad42d0e4c1b9ab0d
-				var t = d3_transition.transition()
-				  .on("interrupt", function(d,i){
-				    console.info(i);
-				  });
+				//Load visited parks information
 
-				d3_request.json("state.topo.json", function(error, topojsonData) {
-				    var us = topojson.feature(topojsonData, topojsonData.objects.states);
 
-				    svg.selectAll(".region")
-				      .data(us.features)
-				      .enter()
-				      .append("path")
-				      .attr("d", path)
-				      .attr("class","region")
-				      .style("fill", "#aca")
-				      .style("stroke", "#000")
-				      .style("stroke-width", "0.5px")
-				      .on("mouseover", function(d,i) {
-				        d3_selection.select(this)
-				          .transition(t)
-				          .style("fill", "red");
-				        })
-				      .on("mouseout", function(d,i) {
-				        d3_selection.select(this).interrupt();
-				        d3_selection.select(this)
-				          .transition(t)
-				          .style("fill", "#aca");
-				        });
-
-				      svg
-				        .append("path")
-				          .style("fill","none")
-				          .style("stroke","#f00")
-				          .attr("d", projection.getCompositionBorders());
-
-				});
-				//end added new section from bl.ocks.org
 
 				// Load in my states data!
-				/*d3.csv("stateslived.csv", function(data) {
+				d3.csv("stateslived.csv", function(data) {
 				color.domain([0,1,2,3]); // setting the range of the input data
 
 				// Load GeoJSON data and merge with states data
-				/d3.json("us-states.json", function(json) {
+				d3.json("state.topo.json", function(json) {
 				// Try loading TopoJSON instead
 				//d3.json("state.topo.json", function(json) {
 
@@ -183,7 +137,7 @@
 						break;
 						}
 					}
-				}*/
+				}
 
 
 				function getObject(obj, key, val){
@@ -204,7 +158,7 @@
 
 
 				// Bind the data to the SVG and create one path per GeoJSON feature
-				/*svg.selectAll("path")
+				svg.selectAll("path")
 					.data(json.features)
 					.enter()
 					.append("path")
@@ -223,7 +177,7 @@
 					//If value is undefined…
 					return "rgb(213,222,217)";
 					}
-				});*/
+				});
 
 
 				// Map the parks I have visited!
@@ -345,7 +299,7 @@
 					});
 
 				});
-				</script>
+		  </script>
 			</div>
 			<div class="container" id="parkdescription">
 				<h1>Overview</h1>
